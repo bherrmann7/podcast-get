@@ -1,4 +1,12 @@
 
+// Please set your download Location 
+def downloadLocation = 'somedir'
+// on Windows, downloadLocation = "c:/pcast/%04d-%s"
+// on Linux/Mac, downloadLocation = "/home/bherrmann/pcast/%04d-%s"
+if ( !new File(downloadLocation).parentFile.isDirectory() ){
+    println "Please edit the script and set the downloadLocation to a directory";
+    System.exit(-1);
+}
 
 def downloadHistory = []
 def downloadHistoryFile = new File("downloadHistory.groovy");
@@ -71,8 +79,7 @@ errors = 0;
 
 enclosures.each {url, filename ->
     println "downloading: " + filename + " " + url
-    ondiskname = String.format("c:/pcast/%04d-%s", downloadHistory.size(), filename)
-    ondiskname = String.format("/home/bob/pcast/%04d-%s", downloadHistory.size(), filename)
+    ondiskname = String.format(downloadLocation, downloadHistory.size(), filename)
 
     file = new File(ondiskname)
     file.parentFile.mkdir()
