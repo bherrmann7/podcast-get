@@ -1,3 +1,13 @@
+
+/**
+ How to get and use this script on Linux
+   $ wget -O pget.groovy http://github.com/bherrmann7/podcast-get/tree/master%2Fsrc%2Fpget.groovy?raw=true
+   $ mkdir /tmp/downloads
+   $ use vi to set the downloadLocation (to /tmp/downloads)
+   $ groovy pget.groovy
+Enjoy.
+*/
+
 // Please set your download Location 
 def downloadLocation 
 // on Windows, downloadLocation = "c:/pcast/%04d-%s"
