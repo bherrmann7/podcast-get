@@ -1,21 +1,23 @@
-
-/**
- How to get and use this script on Linux
-   $ wget -O pget.groovy http://github.com/bherrmann7/podcast-get/tree/master%2Fsrc%2Fpget.groovy?raw=true
-   $ mkdir /tmp/downloads
-   $ use vi to set the downloadLocation (to /tmp/downloads)
-   $ groovy pget.groovy
-Enjoy.
+/*
+ How to get and use this script
+   1. Download this script as pget.groovy (click the 'raw' link on this github page.)
+   2. Create a directory to save the podcast in (for example, mkdir /tmp/podcasts )
+   3. Edit pget.groovy and change the sites to be url's to podcasts you like
+   4. Run like this, "groovy pget.groovy <downloadLocation>" (ie. groovy pget.groovy /tmp/podcasts)
+ Enjoy.
 */
-
-// Please set your download Location 
-def downloadLocation 
-// on Windows, downloadLocation = "c:/pcast/%04d-%s"
-// on Linux/Mac, downloadLocation = "/home/bherrmann/pcast/%04d-%s"
-if (  downloadLocation == null || !new File(downloadLocation).parentFile.isDirectory() ){
-    println "Please edit the script and set the downloadLocation to a directory";
+// groovy 1.6beta2 has a bug. uncomment this line to use it.
+// def args = [ "/tmp/podcasts" ]
+if (args.size() != 1 ){
+   println "usage: pget downloadDirectory"
+   System.exit(1)
+}
+def downloadLocation = args[0]
+if (  !new File(downloadLocation).isDirectory() ){
+    println "Error: The argument (${downloadLocation}) is not a directory."
     System.exit(-1);
 }
+downloadLocation += File.separator + "%04d-%s"
 
 def downloadHistory = []
 def downloadHistoryFile = new File("downloadHistory.groovy");
@@ -74,7 +76,7 @@ sites.each {site ->
                 // prevend downloading past 'areadly have'
                 max = 0;
             } else {
-                println "X-X Will get: " + filename + " " + url
+                println "Will get: " + filename + " " + url
                 enclosures[url] = filename
             }
 
