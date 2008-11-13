@@ -1,6 +1,6 @@
 /*
  How to get and use this script
-   1. Download this script as pget.groovy (click the 'raw' link on this github page.)
+   1. Download this script as pget.groovy (click the 'raw' link on this github page. -------^^^  )
    2. Create a directory to save the podcast in (for example, mkdir /tmp/podcasts )
    3. Edit pget.groovy and change the sites to be url's to podcasts you like
    4. Run like this, "groovy pget.groovy <downloadLocation>" (ie. groovy pget.groovy /tmp/podcasts)
