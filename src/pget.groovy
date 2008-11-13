@@ -1,9 +1,8 @@
-
 // Please set your download Location 
-def downloadLocation = 'somedir'
+def downloadLocation 
 // on Windows, downloadLocation = "c:/pcast/%04d-%s"
 // on Linux/Mac, downloadLocation = "/home/bherrmann/pcast/%04d-%s"
-if ( !new File(downloadLocation).parentFile.isDirectory() ){
+if (  downloadLocation == null || !new File(downloadLocation).parentFile.isDirectory() ){
     println "Please edit the script and set the downloadLocation to a directory";
     System.exit(-1);
 }
