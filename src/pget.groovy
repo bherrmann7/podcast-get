@@ -1,13 +1,13 @@
 /*
-I use this script to download new mp3's into a directory.   I then copy the files onto my mp3 player and
-listen to them during my commute.  When I'm need a recharge of new mp3s, I re-run the script to get more podcasts.
-
  How to get and use this script
    1. Download this script as pget.groovy (click the 'raw' link on this github page.)  --------------------^^^  
    2. Create a directory to save the podcast in (for example, mkdir /tmp/podcasts )
    3. Edit pget.groovy and change the sites to be url's to podcasts you like
    4. Run like this, "groovy pget.groovy <downloadLocation>" (ie. groovy pget.groovy /tmp/podcasts)
  Enjoy.
+
+I use this script to download new mp3's into a directory.   I then copy the files onto my mp3 player and
+listen to them during my commute.  When I'm need a recharge of new mp3s, I re-run the script to get more podcasts.
 
 This script;
 - numbers the files uniquely (so there arent any naming collisions)
