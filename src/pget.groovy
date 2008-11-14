@@ -10,7 +10,7 @@ I use this script to download new mp3's into a directory.   I then copy the file
 listen to them during my commute.  When I'm need a recharge of new mp3s, I re-run the script to get more podcasts.
 
 This script;
-- numbers the files uniquely (so there arent any naming collisions)
+- numbers the files uniquely (so there aren't any naming collisions)
 - preserves the download order so I hear my most important podcasts first.
 - keeps track of what is downloaded (so you don't get the same podcasts over and over.)
 - only downloads a max of 3 podcasts from each source (so when first using this script you don't get 100 podcasts)
@@ -31,7 +31,7 @@ if (  !new File(downloadLocation).isDirectory() ){
 downloadLocation += File.separator + "%04d-%s"
 
 def downloadHistory = []
-def downloadHistoryFile = new File(System.properties['user.home']+File.separator+'.pgetDownloadHistory");
+def downloadHistoryFile = new File(System.properties['user.home']+File.separator+'.pgetDownloadHistory');
 if ( downloadHistoryFile.exists() ){
    downloadHistory = evaluate(downloadHistoryFile.text)
 } else {
