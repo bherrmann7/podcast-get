@@ -31,7 +31,7 @@ if (  !new File(downloadLocation).isDirectory() ){
 downloadLocation += File.separator + "%04d-%s"
 
 def downloadHistory = []
-def downloadHistoryFile = new File("downloadHistory.groovy");
+def downloadHistoryFile = new File(System.properties['user.home']+File.separator+'.pgetDownloadHistory");
 if ( downloadHistoryFile.exists() ){
    downloadHistory = evaluate(downloadHistoryFile.text)
 } else {
