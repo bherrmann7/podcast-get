@@ -1,5 +1,6 @@
 /*
  How to get and use this script
+   0. Get Groovy from http://groovy.codehaus.org/
    1. Download this script as pget.groovy (click the 'raw' link on this github page.)  --------------------^^^  
    2. Create a directory to save the podcast in (for example, mkdir /tmp/podcasts )
    3. Edit pget.groovy and change the sites to be url's to podcasts you like
@@ -43,16 +44,16 @@ println "running, cached: " + downloadHistory.size()
 sites = [
         "http://hansamann.podspot.de/rss",
         "http://www.pbs.org/cringely/pulpit/rss/podcast.rss.xml",
+        "http://feeds.feedburner.com/javaposse",
+        "http://feeds.feedburner.com/rubyonrailspodcast",
+        "http://blog.stackoverflow.com/index.php?feed=podcast",
         "http://leoville.tv/podcasts/ww.xml",
         "http://www.nofluffjuststuff.com/s/podcast/itunes.xml",
         "http://media.ajaxian.com/",
-        "http://feeds.feedburner.com/javaposse",
         "http://www.discovery.com/radio/xml/sciencechannel.xml",
         "http://feeds.feedburner.com/gigavox/channel/itconversations",
-        "http://feeds.feedburner.com/rubyonrailspodcast",
         "http://www.slate.com/podcast/",
         "http://www.scienceandsociety.net/podcasts/index.xml",
-        "http://blog.stackoverflow.com/index.php?feed=podcast",
         "http://leoville.tv/podcasts/floss.xml",
         "http://leoville.tv/podcasts/dgw.xml",
         "http://leoville.tv/podcasts/jm.xml"
