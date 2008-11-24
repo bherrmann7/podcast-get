@@ -69,7 +69,7 @@ sites.each {site ->
     println "site: ${site}"
     xml = new groovy.util.XmlSlurper().parse(site)
 
-    int max = 3;
+    int max = 6;
 
     def xmlenclosures = xml.depthFirst().findAll { it.name().equals("enclosure") }
     println "   has ${xmlenclosures.size()} enclosures"
