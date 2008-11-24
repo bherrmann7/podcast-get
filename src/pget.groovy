@@ -55,9 +55,7 @@ sites = [
         "http://www.slate.com/podcast/",
         "http://www.scienceandsociety.net/podcasts/index.xml",
         "http://leoville.tv/podcasts/floss.xml",
-        "http://leoville.tv/podcasts/dgw.xml",
-        "http://leoville.tv/podcasts/jm.xml"
-
+http://agiletoolkit.libsyn.com/rss
 ]
 enclosures = [:]
 
