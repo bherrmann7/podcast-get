@@ -56,6 +56,7 @@ sites = [
         "http://www.scienceandsociety.net/podcasts/index.xml",
         "http://leoville.tv/podcasts/floss.xml",
         "http://agiletoolkit.libsyn.com/rss"
+http://feeds.feedburner.com/railsenvy-podcast
 ]
 enclosures = [:]
 
