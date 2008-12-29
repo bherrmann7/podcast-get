@@ -42,6 +42,7 @@ if ( downloadHistoryFile.exists() ){
 println "running, cached: " + downloadHistory.size()
 
 sites = [
+        "http://www.cringely.com/feed/podcast/",
         "http://feedproxy.google.com/androidguyscom",
         "http://hansamann.podspot.de/rss",
         "http://www.pbs.org/cringely/pulpit/rss/podcast.rss.xml",
