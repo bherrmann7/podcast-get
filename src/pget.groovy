@@ -52,13 +52,12 @@ sites = [
         "http://leoville.tv/podcasts/ww.xml",
         "http://www.nofluffjuststuff.com/s/podcast/itunes.xml",
         "http://media.ajaxian.com/",
+        "http://agiletoolkit.libsyn.com/rss",
+        "http://feeds.feedburner.com/railsenvy-podcast",
         "http://www.discovery.com/radio/xml/sciencechannel.xml",
         "http://feeds.feedburner.com/gigavox/channel/itconversations",
-        "http://www.slate.com/podcast/",
         "http://www.scienceandsociety.net/podcasts/index.xml",
         "http://leoville.tv/podcasts/floss.xml",
-        "http://agiletoolkit.libsyn.com/rss",
-        "http://feeds.feedburner.com/railsenvy-podcast"
 ]
 enclosures = [:]
 
@@ -115,6 +114,8 @@ enclosures.each {url, filename ->
         def out = new BufferedOutputStream(fileOut)
         out << new URL(url).openStream()
         out.close()
+
+        [ "/usr/bin/id3v2", "-t", filename,  file.toString() ].execute()
     }
     println "ok have downloadHistory[$filename]=$ondiskname"
 
