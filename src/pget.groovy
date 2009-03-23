@@ -7,8 +7,6 @@
    4. Run like this, "groovy pget.groovy <downloadLocation>" (ie. groovy pget.groovy /tmp/podcasts)
  Enjoy.
 
-small change
-
 I use this script to download new mp3's into a directory.   I then copy the files onto my mp3 player and
 listen to them during my commute.  When I'm need a recharge of new mp3s, I re-run the script to get more podcasts.
 
@@ -44,11 +42,13 @@ if ( downloadHistoryFile.exists() ){
 println "running, cached: " + downloadHistory.size()
 
 sites = [
-        "http://hansamann.podspot.de/rss",
-        "http://www.pbs.org/cringely/pulpit/rss/podcast.rss.xml",
-        "http://www.javaworld.com/podcasts/jtech/index.xml",
+        "http://feeds2.feedburner.com/WebdevradioPodcastHome",
+        "http://feeds2.feedburner.com/PhandroidPodcast",
+        "http://feeds2.feedburner.com/ThisAintYourDadsJava",
         "http://www.cringely.com/feed/podcast/",
         "http://feedproxy.google.com/androidguyscom",
+        "http://hansamann.podspot.de/rss",
+        "http://www.pbs.org/cringely/pulpit/rss/podcast.rss.xml",
         "http://feeds.feedburner.com/javaposse",
         "http://feeds.feedburner.com/rubyonrailspodcast",
         "http://blog.stackoverflow.com/index.php?feed=podcast",
@@ -118,7 +118,7 @@ enclosures.each {url, filename ->
         out << new URL(url).openStream()
         out.close()
 
-        [ "/usr/bin/id3v2", "-t", filename,  file.toString() ].execute()
+        [ "/usr/bin/id3v2", "-t", '_' + file.name, ondiskname ].execute()
     }
     println "ok have downloadHistory[$filename]=$ondiskname"
 
