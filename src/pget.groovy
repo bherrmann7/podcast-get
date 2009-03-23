@@ -7,6 +7,8 @@
    4. Run like this, "groovy pget.groovy <downloadLocation>" (ie. groovy pget.groovy /tmp/podcasts)
  Enjoy.
 
+small change
+
 I use this script to download new mp3's into a directory.   I then copy the files onto my mp3 player and
 listen to them during my commute.  When I'm need a recharge of new mp3s, I re-run the script to get more podcasts.
 
